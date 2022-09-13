@@ -10,9 +10,19 @@ range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
+let range = (start, end) => {
+  let arr = []
+  if (start >= end) {
+    return arr;
+  }
 
-// your code here
+  return arr.concat([start], range(start + 1, end))
 
+}
+
+console.log(range(1, 5)); // [1, 2, 3, 4]
+console.log(range(3, 4)); // [3]
+console.log(range(7, 6)); // []
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
